@@ -1,0 +1,37 @@
+const Discord = require ("discord.js");
+
+exports.run = (client, message) => {
+    if (!message.guild) {
+    const ozelmesajuyari = new Discord.MessageEmbed()
+    .setColor(0xFF0000)
+    .setTimestamp()
+    .setAuthor(message.author.username, message.author.avatarURL)
+    .addField('**Komutları Özel Mesajlarda Kullanılamaz!**')
+    return message.author.send(ozelmesajuyari); }
+const GalaxyBot = new Discord.MessageEmbed()
+
+.setColor("GRAY")
+.setTitle("**<a:tac:807285920909885442>RTX<a:tac:807285920909885442> **")
+.setDescription(
+)
+
+.addField('<a:tac:807285920909885442> c!abonerol ',' Abone Rolunu  Ayarlarsınız ')
+.addField('<a:zil:807286166319136784> c!abone-y-rol ','  Abone Rolunu Verecek Yetkiliyi Ayarlarsınız')
+.addField('<a:discord:807286061502824498> c!abone-yetkili-rol','   Abone Rolu Veren Yetkili Rolunu Ayarlarsınız')
+.addField('<a:can:807286554959413290> c!abonelog ','  Abone Log Kanalını Ayarlarsınız Komutları')
+return message.channel.send(GalaxyBot)
+.then; 
+
+};
+exports.conf = {
+    enabled: true, 
+    guildOnly: false, 
+    aliases: [], 
+    permLevel: 0 
+};
+  
+  exports.help = {
+    name: 'abone-yardım', 
+    description: 'Botun Komut Listesini Gösterir!',
+    usage: '-eğlence'
+};

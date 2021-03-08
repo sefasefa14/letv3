@@ -1,0 +1,47 @@
+const Discord = require("discord.js");
+
+exports.run = (client, message) => {
+  const EmbedPinCode = new Discord.MessageEmbed()
+
+    .setColor("RANDOM")
+    .setTitle(
+      "**▬▬▬▬▬▬[** ©️ **» RTX Bot** ©️ **]▬▬▬▬▬▬**  **  **Prefixim: `c!`"
+    )
+	.setImage('https://cdn.discordapp.com/attachments/803756594491686972/804333492040892436/rtx.png')
+    .setThumbnail(
+    )
+    .setDescription(
+      `
+**▬▬▬▬▬▬▬[**    **Komut Listesi**    **]▬▬▬▬▬▬**
+
+> **» c!botlist-ayar :** Gelişmiş Botlist Sistemini Aktif Edersiniz.
+> **» c!botekle :** Bot Eklersiniz :).
+**   ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬**
+> **» c!reddet :** Başvuru Yapan Botu Reddersiniz
+**   ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬**
+> **» c!onayla :**  Başvuru Yapan Botu Onaylarsınız.
+**   ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬**
+**» Bağlantılar** 
+**[Destek Sunucusu](https://discord.gg/UrpcyMV2hT)** **•** **[Botun Davet Linki](https://discord.com/oauth2/authorize?client_id=732698517876768910&permissions=8&scope=bot)** **•** [**Web Site**]( )
+`
+    )
+
+    .setFooter(client.user.username + "", client.user.avatarURL)
+    .setTimestamp();
+	
+
+  return message.channel.send(EmbedPinCode).then;
+  return message.channel.send(EmbedPinCode).then;
+};
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: 0
+};
+
+exports.help = {
+  name: "botlist-yardım",
+  description: "Botun Komut Listesini Gösterir!",
+  usage: "-yardım"
+};

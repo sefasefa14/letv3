@@ -1,0 +1,58 @@
+
+
+const Discord = require('discord.js')
+const moment = require('moment')
+const db = require('quick.db')
+const ayarlar = require('../ayarlar.json')
+const client = new Discord.Client();
+require("moment-duration-format");
+const prefix = ayarlar.prefix
+exports.run = async (bot, msg, args) => {
+
+        const çekiliş = new Discord.MessageEmbed()
+                .setColor('GOLD')
+        .setFooter(`${msg.author.username} Başarıyla Şablon Sistemi Komutunu Kullandı!`, msg.author.avatarURL)
+        .setAuthor('RTX Şablon Yardım Menusu')
+        .setImage('https://cdn.discordapp.com/attachments/806895173665685505/808042202051379210/rtx.jpg')
+        .setDescription('<a:tac:807285920909885442> Botu Davet Etmek İçin `c!davet` yazabilirisiniz.',false)
+        .addField('**<a:tac:807285920909885442>c!kod-tema**',' `Kod Sunucu Şablonunu Alırsınız `',false )
+        .addField('**<a:ys:808764885349171240>c!botlist-tema**', ' `Botlist Sw Teması`',true)
+        .addField('**<a:tac:807285920909885442>c!nivo-tema**','  `Nivo Tv Discord Şablonu Görürsünüz`',true)
+        .addField('**<a:tac:807285920909885442>c!nitro-sunucu-kur**','`Nitro Satış Sw',true)
+        .addField('**<a:tac:807285920909885442>c!atlantis-tema**', ' `Public Sw Teması`',false)
+        .addField('**<a:tac:807285920909885442>c!bot-satış-tema**', ' `Bot Satış Sw Teması`',true) 
+        .addField('**<a:ys:808764885349171240>c!dil-değisen-sunucu-tema**', ' `Dil Değiştiren Sw Teması`',true)
+        .addField('**<a:ys:808764885349171240>c!gelişmis-satış-tema**', ' `Gelişmiş Satış Sw Teması`',true)
+        .addField('**<a:ys:808764885349171240>c!gif-tema**', ' `Gif Sw Teması`',false)
+        .addField('**<a:ys:808764885349171240>c!j4j-v2-tema**', ' `J4j Sw Teması`',true) 
+        .addField('**<a:ys:808764885349171240>c!mta-tema**', ' `Mta Sw Teması`',true)  
+        .addField('**<a:ys:808764885349171240>c!nitro-tema**', ' `Nitro Satış Sw Teması`',true)
+        .addField('**<a:ys:808764885349171240>c!public-tema**', ' `Public Sw Teması`',false)
+        .addField('**<a:ys:808764885349171240>c!şablon-tema**', ' `Şablon Kurma Sw Teması`',true)
+        .addField('**<a:ys:808764885349171240>c!site-satış-tema**', ' `Site Satış Sw Teması`',true)
+        .addField('**<a:ys:808764885349171240>c!sınıf-tema**', ' `Sınıf Teması`',true) 
+        .addField('**<a:ys:808764885349171240>c!uptime-support-tema**', ' `Uptime Destek Sunucu Teması`',false)
+        .addField('**<a:ys:808764885349171240>c!youtube-twitch-tema**', ' `Youtube Twitch Sunucu Şablonu`',true) 
+        .addField('**<a:ys:808764885349171240>c!zula-tema**', ' `Zula Oyun Sw Teması`',true)
+        .addField('**<a:ys:808764885349171240>c!fivem-tema**', ' `Gta 5 Roleplay Sw Teması`',true)
+        .addField('**<a:ys:808764885349171240>c!davet-et-kazan**', ' `Rewards Sw Teması`',false)
+        .addField('**<a:ys:808764885349171240>c!altyapı-tema**', ' `Altyapı Sw Teması`',true)
+        .addField('**<a:ys:808764885349171240>c!tasarım-tema**', ' `Tasarım Sunucu Teması`',true)  
+        .addField('**<a:carp:808692069697847306>Bilgilendirme**', '>  `c!davet` | Botu Sununuya Davet Edersiniz \n<a:tac:807285920909885442> `c!istatistik` | Botun İslatistiklerini Görürsünüz.`',false)
+        
+  
+msg.channel.send(çekiliş)
+    
+}
+exports.conf = {
+  enabled: true,
+  guildOnly: true,
+ aliases: ['çekiliş', 'giveawey'],
+  kategori: 'yardım',
+  permLevel: 0
+};
+exports.help = {
+  name: 'şablon-yardım',
+  description: 'İstediğiniz kullanıcını bilgilerini gösterir.',
+  usage: 'çekiliş'
+};
